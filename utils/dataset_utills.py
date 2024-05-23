@@ -27,9 +27,18 @@ def main():
                 "answer": answer
             })
 
+    final_question = []
+    final_answer = []
+
+    for item in final_data:
+        final_question.append(item["question"])
+        final_answer.append(item["answer"])
+
     # Save the data
-    with open("../datasets/faq.json", "w") as f:
-        json.dump(final_data, f, indent=4)
+    pd.DataFrame({
+        "question": final_question,
+        "answer": final_answer
+    }).to_csv("../datasets/faq.csv", sep="\t", index=False)
     return
 
 
