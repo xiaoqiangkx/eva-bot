@@ -2,7 +2,6 @@
 from typing import List
 
 from fastapi import FastAPI
-from langchain_core.prompts import ChatPromptTemplate
 from langchain_openai import ChatOpenAI
 from langchain_community.document_loaders import WebBaseLoader
 from langchain_openai import OpenAIEmbeddings

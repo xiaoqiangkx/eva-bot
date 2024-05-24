@@ -1,4 +1,8 @@
+"""
+    client demo
+"""
 # encoding: utf-8
+
 from langserve import RemoteRunnable
 
 remote_chain = RemoteRunnable("http://localhost:8000/agent/")
