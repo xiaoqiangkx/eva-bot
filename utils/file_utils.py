@@ -11,6 +11,19 @@ def count_filetype_in_dir(dir_path):
             filetype_dict[filetype] += 1
     return filetype_dict
 
+# aggregate all files in a directory, return a dict of filetype and list of files
+
+
+def aggregate_files_in_dir(dir_path):
+    import os
+    import collections
+    filetype_dict = collections.defaultdict(list)
+    for root, dirs, files in os.walk(dir_path):
+        for file in files:
+            filetype = file.split('.')[-1]
+            filetype_dict[filetype].append(os.path.join(root, file))
+    return filetype_dict
+
 
 if __name__ == "__main__":
     from utils import consts
