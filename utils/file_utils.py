@@ -32,6 +32,14 @@ def aggregate_files_in_dir(dir_path: str) -> dict:
     return filetype_dict
 
 
+# judge if directory is empty
+def is_dir_empty(dir_path: str) -> bool:
+    """
+        judge if directory is empty
+    """
+    return not any(os.scandir(dir_path))
+
+
 if __name__ == "__main__":
     data_dir = os.path.join(consts.ROOT_DIR, "datasets")
     output = count_filetype_in_dir(data_dir)
