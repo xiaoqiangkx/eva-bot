@@ -142,3 +142,6 @@ dist
 .tern-port
 
 *.png
+
+# persist for vectorstore
+persist/*
