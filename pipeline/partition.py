@@ -1,6 +1,6 @@
 # encoding: utf-8
 """
-Partitioning the data into chunks for training and testing sets
+Partitioning the data into documents for RAG
 """
 
 
